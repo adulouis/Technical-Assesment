@@ -4,6 +4,7 @@
 - Active Branches: noetic, humble, jazzy, main
 - Legacy Branches: *-devel
 
+<<<<<<< HEAD
 ## Open Source Projects Related to TurtleBot3
 - [turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3)
 - [turtlebot3_msgs](https://github.com/ROBOTIS-GIT/turtlebot3_msgs)
@@ -21,21 +22,25 @@
 - [dynamixel_sdk](https://github.com/ROBOTIS-GIT/DynamixelSDK)
 - [OpenCR-Hardware](https://github.com/ROBOTIS-GIT/OpenCR-Hardware)
 - [OpenCR](https://github.com/ROBOTIS-GIT/OpenCR)
+=======
+## Install Dependencies
+### Install Cartographer
+- sudo apt install ros-humble-cartographer
+- sudo apt install ros-humble-cartographer-ros
+### Install Navigation Stack for ROS2
+- sudo apt install ros-humble-navigation2
+-  sudo apt install ros-humble-nav2-bringup
+>>>>>>> refs/remotes/origin/master
 
-## Documentation, Videos, and Community
+## Starting the simulation
+### Starting the Environment
+- Source the environment: source ~/turtlebot3_ws/install/setup.bash
+- Launch the environment: ros2 launch turtlebot3_gazebo empty_world.launch.py
 
-### Official Documentation
-- ⚙️ **[ROBOTIS DYNAMIXEL](https://dynamixel.com/)**
-- 📚 **[ROBOTIS e-Manual for Dynamixel SDK](http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/)**
-- 📚 **[ROBOTIS e-Manual for TurtleBot3](http://turtlebot3.robotis.com/)**
-- 📚 **[ROBOTIS e-Manual for OpenMANIPULATOR-X](https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/)**
+## Starting the Goal Server
+- Open a new terminal
+- Source the environment: source ~/turtlebot3_ws/install/setup.bash
+- Start the server: ros2 run turtlebot3_example turtlebot3_goal_service
 
-### Learning Resources
-- 🎥 **[ROBOTIS YouTube Channel](https://www.youtube.com/@ROBOTISCHANNEL)**
-- 🎥 **[ROBOTIS Open Source YouTube Channel](https://www.youtube.com/@ROBOTISOpenSourceTeam)**
-- 🎥 **[ROBOTIS TurtleBot3 YouTube Playlist](https://www.youtube.com/playlist?list=PLRG6WP3c31_XI3wlvHlx2Mp8BYqgqDURU)**
-- 🎥 **[ROBOTIS OpenMANIPULATOR YouTube Playlist](https://www.youtube.com/playlist?list=PLRG6WP3c31_WpEsB6_Rdt3KhiopXQlUkb)**
-
-### Community & Support
-- 💬 **[ROBOTIS Community Forum](https://forum.robotis.com/)**
-- 💬 **[TurtleBot category from ROS Community](https://discourse.ros.org/c/turtlebot/)**
+## Calling the service
+- ros2 service call turtlebot3_goal_server turtlebot3_msgs/srv/PoseCommand "{x: <x_position>, y: <y_position>, yaw: <yaw_angle>}"
