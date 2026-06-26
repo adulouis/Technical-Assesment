@@ -1,3 +1,8 @@
 /turtlebot3_bringup
 /turtlebot3_navigation2
 /turtlebot3_cartographer
+/turtlebot3
+/docker
+/turtlebot3_node
+/turtlebot3_teleop
+/turtlebot3_description
