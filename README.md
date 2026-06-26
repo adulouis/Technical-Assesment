@@ -45,7 +45,7 @@ Service type:
 Service Call Format:
 
 ```bash
-ros2 service call /turtlebot3_goal_server turtlebot3_msgs/srv/PoseCommand "{x: <float>, y: <float>, yaw: <float>}"
+ros2 service call /turtlebot3_goal_server posecommand_msgs/srv/PoseCommand "{x: <float>, y: <float>, yaw: <float>}"
 ```
 ## Service Field Description
 
