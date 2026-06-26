@@ -5,7 +5,7 @@ from rclpy.node import Node
 from rclpy.constants import S_TO_NS
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
-from turtlebot3_msgs.srv import PoseCommand
+from posecommand_msgs.srv import PoseCommand
 from tf_transformations import euler_from_quaternion
 
 
